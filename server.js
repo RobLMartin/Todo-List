@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 
-const users = require("./routes/api/users");
-const profile = require("./routes/api/profile");
-const posts = require("./routes/api/posts");
+// const users = require("./routes/api/users");
+// const profile = require("./routes/api/profile");
+// const posts = require("./routes/api/posts");
 
 const app = require("express")();
 
@@ -27,12 +27,12 @@ mongoose
 // Passport middleware
 app.use(passport.initialize());
 
-// Passport Config
+// // Passport Config
 require("./config/passport")(passport);
 
 //use routes
-app.use("/api/users", users);
-app.use("/api/profile", profile);
-app.use("/api/posts", posts);
+// app.use("/api/users", users);
+// app.use("/api/profile", profile);
+// app.use("/api/posts", posts);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
