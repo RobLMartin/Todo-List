@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 
 const users = require("./routes/api/users");
-// const profile = require("./routes/api/profile");
+const todos = require("./routes/api/todos");
 // const posts = require("./routes/api/posts");
 
 const app = require("express")();
@@ -32,7 +32,7 @@ require("./config/passport")(passport);
 
 //use routes
 app.use("/api/users", users);
-// app.use("/api/profile", profile);
+app.use("/api/todos", todos);
 // app.use("/api/posts", posts);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
