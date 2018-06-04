@@ -1,5 +1,5 @@
 {
-  "name": "Todo-List",
+  "name": "todolist",
   "version": "1.0.0",
   "description": "a todo list app",
   "main": "server.js",
