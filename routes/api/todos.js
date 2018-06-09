@@ -60,8 +60,7 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Todo.find({
-      user: req.user.id,
-      isdone: false
+      user: req.user.id
     })
       .then(todos => res.json(todos))
       .catch(err => res.status(404).json({ todosnotfound: "No todos found" }));
